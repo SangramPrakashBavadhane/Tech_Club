@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom terminal themed colors */
+  --color-terminal-bg: #09090b;
+  /* Deep zinc dark-mode background */
+  --color-terminal-panel: #18181b;
+  /* Lighter panel background */
+  --color-terminal-border: #27272a;
+  /* Muted board borders */
+  --color-terminal-cyan: #06b6d4;
+  /* Neon Cyan primary metric/cursor */
+  --color-terminal-emerald: #10b981;
+  /* Neon Emerald tracker completion */
+  --color-terminal-accent: #a855f7;
+  /* Neon Purple tertiary accents */
+  --color-terminal-muted: #71717a;
+  /* Gray text */
+
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  background-color: var(--color-terminal-bg);
+  color: #f4f4f5;
+  /* zinc-100 */
+  font-family: var(--font-mono);
+  margin: 0;
+  padding: 0;
+}
