@@ -1,0 +1,95 @@
+[
+    {
+        "title": "Arrays & Hashing",
+        "questions": [
+            {
+                "id": 1,
+                "name": "Set Matrix Zeroes",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/set-matrix-zeroes/"
+            },
+            {
+                "id": 2,
+                "name": "Pascal's Triangle",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/pascals-triangle/"
+            },
+            {
+                "id": 3,
+                "name": "Next Permutation",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/next-permutation/"
+            },
+            {
+                "id": 4,
+                "name": "Kadane's Algorithm",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/maximum-subarray/"
+            },
+            {
+                "id": 5,
+                "name": "Sort Colors (0s, 1s, 2s)",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/sort-colors/"
+            },
+            {
+                "id": 6,
+                "name": "Best Time to Buy and Sell Stock",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+            }
+        ]
+    },
+    {
+        "title": "Linked List",
+        "questions": [
+            {
+                "id": 7,
+                "name": "Reverse a Linked List",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/reverse-linked-list/"
+            },
+            {
+                "id": 8,
+                "name": "Find the middle of Linked List",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/middle-of-the-linked-list/"
+            },
+            {
+                "id": 9,
+                "name": "Merge two sorted Linked Lists",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/merge-two-sorted-lists/"
+            },
+            {
+                "id": 10,
+                "name": "Remove N-th node from back of List",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/"
+            }
+        ]
+    },
+    {
+        "title": "Dynamic Programming",
+        "questions": [
+            {
+                "id": 11,
+                "name": "Longest Common Subsequence",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/longest-common-subsequence/"
+            },
+            {
+                "id": 12,
+                "name": "0-1 Knapsack Problem",
+                "platform": "GeeksforGeeks",
+                "link": "https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1"
+            },
+            {
+                "id": 13,
+                "name": "Edit Distance",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/edit-distance/"
+            }
+        ]
+    }
+]
