@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import authRoutes from './routes/auth.js';
+import dsaRoutes from './routes/dsa.js';
 
 dotenv.config({ path: '../.env' });
 
@@ -12,6 +13,8 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/syntax
 
 app.use(cors());
 app.use(express.json());
+app.use('/api/dsa', dsaRoutes);
+
 
 app.use('/api/auth', authRoutes);
 

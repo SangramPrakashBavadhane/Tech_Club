@@ -1,6 +1,6 @@
 [
     {
-        "title": "Arrays & Hashing",
+        "title": "Arrays",
         "questions": [
             {
                 "id": 1,
@@ -10,7 +10,7 @@
             },
             {
                 "id": 2,
-                "name": "Pascal's Triangle",
+                "name": "Pascal's Triangle I",
                 "platform": "LeetCode",
                 "link": "https://leetcode.com/problems/pascals-triangle/"
             },
@@ -28,15 +28,138 @@
             },
             {
                 "id": 5,
-                "name": "Sort Colors (0s, 1s, 2s)",
+                "name": "Sort an array of 0's 1's and 2's",
                 "platform": "LeetCode",
                 "link": "https://leetcode.com/problems/sort-colors/"
             },
             {
                 "id": 6,
-                "name": "Best Time to Buy and Sell Stock",
+                "name": "Stock Buy and Sell",
                 "platform": "LeetCode",
                 "link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+            }
+        ]
+    },
+    {
+        "title": "Arrays Part-II",
+        "questions": [
+            {
+                "id": 7,
+                "name": "Rotate matrix by 90 degrees",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/rotate-image/"
+            },
+            {
+                "id": 8,
+                "name": "Merge Overlapping Subintervals",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/merge-intervals/"
+            },
+            {
+                "id": 9,
+                "name": "Merge two sorted arrays without extra space",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/merge-sorted-array/"
+            },
+            {
+                "id": 10,
+                "name": "Find the Duplicate Number",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/find-the-duplicate-number/"
+            },
+            {
+                "id": 11,
+                "name": "Find the repeating and missing number",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/find-the-repeating-and-missing-numbers/"
+            },
+            {
+                "id": 12,
+                "name": "Inversion of Array (Pre-req: Merge Sort)",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/count-inversions-in-an-array"
+            }
+        ]
+    },
+    {
+        "title": "Arrays Part-III",
+        "questions": [
+            {
+                "id": 13,
+                "name": "Search in a 2D matrix",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/search-a-2d-matrix/"
+            },
+            {
+                "id": 14,
+                "name": "Pow(x, n)",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/powx-n/"
+            },
+            {
+                "id": 15,
+                "name": "Majority Element-I",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/majority-element/"
+            },
+            {
+                "id": 16,
+                "name": "Majority Element-II",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/majority-element-ii/"
+            },
+            {
+                "id": 17,
+                "name": "Grid unique paths",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/unique-paths/"
+            },
+            {
+                "id": 18,
+                "name": "Reverse Pairs",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/reverse-pairs/"
+            }
+        ]
+    },
+    {
+        "title": "Arrays Part-IV",
+        "questions": [
+            {
+                "id": 19,
+                "name": "Two Sum",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/two-sum/"
+            },
+            {
+                "id": 20,
+                "name": "4 Sum",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/4sum/"
+            },
+            {
+                "id": 21,
+                "name": "Longest Consecutive Sequence in an Array",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/longest-consecutive-sequence/solution/"
+            },
+            {
+                "id": 22,
+                "name": "Largest Subarray with K sum",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/length-of-the-longest-subarray-with-zero-sum/"
+            },
+            {
+                "id": 23,
+                "name": "Count subarrays with given xor K",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/count-the-number-of-subarrays-with-given-xor-k/"
+            },
+            {
+                "id": 24,
+                "name": "Longest Substring Without Repeating Characters",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
             }
         ]
     },
@@ -44,28 +167,813 @@
         "title": "Linked List",
         "questions": [
             {
-                "id": 7,
-                "name": "Reverse a Linked List",
+                "id": 25,
+                "name": "Reverse a LL",
                 "platform": "LeetCode",
                 "link": "https://leetcode.com/problems/reverse-linked-list/"
             },
             {
-                "id": 8,
-                "name": "Find the middle of Linked List",
+                "id": 26,
+                "name": "Find Middle of Linked List",
                 "platform": "LeetCode",
                 "link": "https://leetcode.com/problems/middle-of-the-linked-list/"
             },
             {
-                "id": 9,
-                "name": "Merge two sorted Linked Lists",
+                "id": 27,
+                "name": "Merge two Sorted Lists",
                 "platform": "LeetCode",
                 "link": "https://leetcode.com/problems/merge-two-sorted-lists/"
             },
             {
-                "id": 10,
-                "name": "Remove N-th node from back of List",
+                "id": 28,
+                "name": "Remove Nth node from the back of the LL",
                 "platform": "LeetCode",
                 "link": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/"
+            },
+            {
+                "id": 29,
+                "name": "Add two numbers as LinkedList",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/add-two-numbers/"
+            },
+            {
+                "id": 30,
+                "name": "Delete Node in a Linked List O(1)",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/delete-node-in-a-linked-list/"
+            }
+        ]
+    },
+    {
+        "title": "Linked List Part-II",
+        "questions": [
+            {
+                "id": 31,
+                "name": "Find the intersection point of Y LL",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/intersection-of-two-linked-lists/"
+            },
+            {
+                "id": 32,
+                "name": "Detect a loop in LL",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/linked-list-cycle/"
+            },
+            {
+                "id": 33,
+                "name": "Reverse LL in group of given size K",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/reverse-nodes-in-k-group/"
+            },
+            {
+                "id": 34,
+                "name": "Check if LL is palindrome or not",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/palindrome-linked-list/"
+            },
+            {
+                "id": 35,
+                "name": "Find the starting point in LL",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/linked-list-cycle-ii/"
+            },
+            {
+                "id": 36,
+                "name": "Flattening of LL",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/flattening-a-linked-list/"
+            }
+        ]
+    },
+    {
+        "title": "Linked List and Arrays",
+        "questions": [
+            {
+                "id": 37,
+                "name": "Rotate a LL",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/rotate-list/description/"
+            },
+            {
+                "id": 38,
+                "name": "Clone a LL with random and next pointer",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/copy-list-with-random-pointer/"
+            },
+            {
+                "id": 39,
+                "name": "3 Sum",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/3sum/"
+            },
+            {
+                "id": 40,
+                "name": "Trapping Rainwater",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/trapping-rain-water/"
+            },
+            {
+                "id": 41,
+                "name": "Remove duplicates from sorted array",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/#:~:text=Input%3A%20nums%20%3D%20%5B0%2C,%2C%203%2C%20and%204%20respectively."
+            },
+            {
+                "id": 42,
+                "name": "Maximum Consecutive Ones",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/max-consecutive-ones/"
+            }
+        ]
+    },
+    {
+        "title": "Greedy Algorithm",
+        "questions": [
+            {
+                "id": 43,
+                "name": "N meetings in one room",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/n-meetings-in-one-room/"
+            },
+            {
+                "id": 44,
+                "name": "Minimum number of platforms required for a railway",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/minimum-number-of-platforms-required-for-a-railway/"
+            },
+            {
+                "id": 45,
+                "name": "Job sequencing Problem",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/job-sequencing-problem/"
+            },
+            {
+                "id": 46,
+                "name": "Fractional Knapsack",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/fractional-knapsack-problem-greedy-approach/"
+            },
+            {
+                "id": 47,
+                "name": "Minimum coins",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/coin-change/"
+            },
+            {
+                "id": 48,
+                "name": "Assign Cookies",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/assign-cookies/"
+            }
+        ]
+    },
+    {
+        "title": "Recursion",
+        "questions": [
+            {
+                "id": 49,
+                "name": "Subset Sums",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/subset-sum-sum-of-all-subsets/"
+            },
+            {
+                "id": 50,
+                "name": "Subsets II",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/subsets-ii/"
+            },
+            {
+                "id": 51,
+                "name": "Combination Sum",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/combination-sum/"
+            },
+            {
+                "id": 52,
+                "name": "Combination Sum II",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/combination-sum-ii/"
+            },
+            {
+                "id": 53,
+                "name": "Permutation Sequence",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/permutation-sequence/"
+            }
+        ]
+    },
+    {
+        "title": "Recursion and Backtracking",
+        "questions": [
+            {
+                "id": 54,
+                "name": "Permutations of a String",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/permutations/"
+            },
+            {
+                "id": 55,
+                "name": "N Queen",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/n-queens/"
+            },
+            {
+                "id": 56,
+                "name": "Sudoku Solver",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/sudoku-solver/"
+            },
+            {
+                "id": 57,
+                "name": "M Coloring Problem",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/m-coloring-problem/"
+            },
+            {
+                "id": 58,
+                "name": "Rat in a Maze",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/rat-in-a-maze/"
+            }
+        ]
+    },
+    {
+        "title": "Binary Search",
+        "questions": [
+            {
+                "id": 59,
+                "name": "The N-th root of an integer",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/nth-root-of-a-number-using-binary-search/"
+            },
+            {
+                "id": 60,
+                "name": "Matrix Median",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/median-of-row-wise-sorted-matrix/"
+            },
+            {
+                "id": 61,
+                "name": "Single element in sorted array",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/single-element-in-a-sorted-array/"
+            },
+            {
+                "id": 62,
+                "name": "Search element in a sorted and rotated array/ find pivot where it is rotated",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/search-in-rotated-sorted-array/"
+            },
+            {
+                "id": 63,
+                "name": "Kth element of 2 sorted arrays",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/k-th-element-of-two-sorted-arrays/"
+            },
+            {
+                "id": 64,
+                "name": "Allocate Minimum Number of Pages",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/allocate-minimum-number-of-pages/"
+            },
+            {
+                "id": 65,
+                "name": "Aggressive Cows",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/aggressive-cows-detailed-solution/"
+            }
+        ]
+    },
+    {
+        "title": "Heaps",
+        "questions": [
+            {
+                "id": 66,
+                "name": "K-th Largest element in an array",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/kth-largest-smallest-element-in-an-array/"
+            },
+            {
+                "id": 67,
+                "name": "Maximum Sum Combination",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/maximum-sum-combination"
+            },
+            {
+                "id": 68,
+                "name": "Find Median from Data Stream",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/find-median-from-data-stream/"
+            },
+            {
+                "id": 69,
+                "name": "Top K Frequent Elements",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/top-k-frequent-elements/"
+            }
+        ]
+    },
+    {
+        "title": "Stack and Queue",
+        "questions": [
+            {
+                "id": 70,
+                "name": "Implement Stack using Arrays",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/implement-stack-using-array/"
+            },
+            {
+                "id": 71,
+                "name": "Implement Queue using Arrays",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/implement-queue-using-array/"
+            },
+            {
+                "id": 72,
+                "name": "Implement Stack using Queue (using single queue)",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/implement-stack-using-queues/"
+            },
+            {
+                "id": 73,
+                "name": "Implement Queue using Stack",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/implement-queue-using-stacks/"
+            },
+            {
+                "id": 74,
+                "name": "Balanced Paranthesis",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/valid-parentheses/"
+            },
+            {
+                "id": 75,
+                "name": "Next Greater Element",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/next-greater-element-i/"
+            },
+            {
+                "id": 76,
+                "name": "Sort a Stack",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/sort-a-stack"
+            }
+        ]
+    },
+    {
+        "title": "Stack and Queue Part-II",
+        "questions": [
+            {
+                "id": 77,
+                "name": "Next Smaller Element",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/next-smaller-element"
+            },
+            {
+                "id": 78,
+                "name": "LRU Cache",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/program-for-least-recently-used-lru-page-replacement-algorithm"
+            },
+            {
+                "id": 79,
+                "name": "LFU Cache",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/lfu-cache/"
+            },
+            {
+                "id": 80,
+                "name": "Largest rectangle in a histogram",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/largest-rectangle-in-histogram/"
+            },
+            {
+                "id": 81,
+                "name": "Sliding Window Maximum",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/sliding-window-maximum/"
+            },
+            {
+                "id": 82,
+                "name": "Implement Min Stack",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/min-stack/"
+            },
+            {
+                "id": 83,
+                "name": "Rotten Oranges",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/rotting-oranges/"
+            },
+            {
+                "id": 84,
+                "name": "Stock span problem",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/online-stock-span/"
+            },
+            {
+                "id": 85,
+                "name": "Celebrity Problem",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/accounts/login/?next=/problems/find-the-celebrity/"
+            }
+        ]
+    },
+    {
+        "title": "String",
+        "questions": [
+            {
+                "id": 86,
+                "name": "Reverse every word in a string",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/reverse-words-in-a-string/"
+            },
+            {
+                "id": 87,
+                "name": "Roman to Integer",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/roman-to-integer/"
+            },
+            {
+                "id": 88,
+                "name": "Longest Common Prefix",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/longest-common-prefix/"
+            }
+        ]
+    },
+    {
+        "title": "String Part-II",
+        "questions": [
+            {
+                "id": 89,
+                "name": "KMP Algorithm or LPS array",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/implement-strstr/"
+            },
+            {
+                "id": 90,
+                "name": "Minimum insertions to make string palindrome",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/"
+            },
+            {
+                "id": 91,
+                "name": "Valid Anagram",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/valid-anagram/#:~:text=Given%20two%20strings%20s%20and,the%20original%20letters%20exactly%20once.&text=Constraints%3A,.length%20%3C%3D%205%20*%2010"
+            },
+            {
+                "id": 92,
+                "name": "Count and say",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/count-and-say/"
+            }
+        ]
+    },
+    {
+        "title": "Binary Tree",
+        "questions": [
+            {
+                "id": 93,
+                "name": "Inorder Traversal",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/binary-tree-inorder-traversal/"
+            },
+            {
+                "id": 94,
+                "name": "Preorder Traversal",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/binary-tree-preorder-traversal/"
+            },
+            {
+                "id": 95,
+                "name": "Postorder Traversal",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/binary-tree-postorder-traversal/"
+            },
+            {
+                "id": 96,
+                "name": "Morris Inorder Traversal",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/binary-tree-inorder-traversal/"
+            },
+            {
+                "id": 97,
+                "name": "Morris Preorder Traversal",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/binary-tree-inorder-traversal/"
+            },
+            {
+                "id": 98,
+                "name": "Right/Left View of BT",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/binary-tree-right-side-view/"
+            },
+            {
+                "id": 99,
+                "name": "Bottom view of BT",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/bottom-view-of-a-binary-tree/"
+            },
+            {
+                "id": 100,
+                "name": "Top View of BT",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/top-view-of-a-binary-tree/"
+            },
+            {
+                "id": 101,
+                "name": "Pre, Post, Inorder in one traversal",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/preorder-inorder-postorder-traversals-in-one-traversal/"
+            },
+            {
+                "id": 102,
+                "name": "Vertical Order Traversal",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/"
+            },
+            {
+                "id": 103,
+                "name": "Print root to leaf path in BT",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/print-root-to-node-path-in-a-binary-tree/"
+            },
+            {
+                "id": 104,
+                "name": "Maximum Width of BT",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/maximum-width-of-binary-tree/"
+            }
+        ]
+    },
+    {
+        "title": "Binary Tree part-II",
+        "questions": [
+            {
+                "id": 105,
+                "name": "Level Order Traversal",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/binary-tree-level-order-traversal/"
+            },
+            {
+                "id": 106,
+                "name": "Maximum Depth in BT",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+            },
+            {
+                "id": 107,
+                "name": "Diameter of Binary Tree",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/diameter-of-binary-tree/"
+            },
+            {
+                "id": 108,
+                "name": "Check for balanced binary tree",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/balanced-binary-tree/"
+            },
+            {
+                "id": 109,
+                "name": "LCA in BT",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/"
+            },
+            {
+                "id": 110,
+                "name": "Check if two trees are identical or not",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/same-tree/"
+            },
+            {
+                "id": 111,
+                "name": "Zig Zag or Spiral Traversal",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/"
+            },
+            {
+                "id": 112,
+                "name": "Boundary Traversal",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/boundary-of-binary-tree/"
+            }
+        ]
+    },
+    {
+        "title": "Binary Tree part-III",
+        "questions": [
+            {
+                "id": 113,
+                "name": "Maximum path sum",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/binary-tree-maximum-path-sum/"
+            },
+            {
+                "id": 114,
+                "name": "Construct a BT from Preorder and Inorder",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/"
+            },
+            {
+                "id": 115,
+                "name": "Construct a BT from Postorder and Inorder",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/"
+            },
+            {
+                "id": 116,
+                "name": "Symmetric Binary Tree",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/symmetric-tree/"
+            },
+            {
+                "id": 117,
+                "name": "Flatten Binary Tree to Linked List",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/"
+            },
+            {
+                "id": 118,
+                "name": "Check for symmetrical BTs",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/symmetric-tree/"
+            },
+            {
+                "id": 119,
+                "name": "Children Sum Property in Binary Tree",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/check-for-children-sum-property-in-a-binary-tree/"
+            }
+        ]
+    },
+    {
+        "title": "Binary Search Tree",
+        "questions": [
+            {
+                "id": 120,
+                "name": "Search in BST",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/search-in-a-binary-search-tree/"
+            },
+            {
+                "id": 121,
+                "name": "Inorder successor and predecessor in BST",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/inorder-successor-in-bst/"
+            }
+        ]
+    },
+    {
+        "title": "Binary Search Tree Part-II",
+        "questions": [
+            {
+                "id": 122,
+                "name": "Find K-th smallest element in BST",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/"
+            },
+            {
+                "id": 123,
+                "name": "Kth Smallest and Largest element in BST",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/"
+            },
+            {
+                "id": 124,
+                "name": "Two sum in BST",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/two-sum-iv-input-is-a-bst/"
+            },
+            {
+                "id": 125,
+                "name": "BST iterator",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/binary-search-tree-iterator/"
+            },
+            {
+                "id": 126,
+                "name": "Serialize and De-serialize BT",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/"
+            }
+        ]
+    },
+    {
+        "title": "Binary Trees[Miscellaneous]",
+        "questions": [
+            {
+                "id": 127,
+                "name": "Kth largest element in a stream of running integers",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/kth-largest-element-in-a-stream/#:~:text=Implement%20KthLargest%20class%3A,largest%20element%20in%20the%20stream."
+            }
+        ]
+    },
+    {
+        "title": "Graph",
+        "questions": [
+            {
+                "id": 128,
+                "name": "DFS",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/depth-first-search-dfs/"
+            },
+            {
+                "id": 129,
+                "name": "Traversal Techniques",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/depth-first-search-dfs/"
+            },
+            {
+                "id": 130,
+                "name": "Detect A cycle in Undirected Graph using BFS",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/course-schedule/"
+            },
+            {
+                "id": 131,
+                "name": "Detect A cycle in Undirected Graph using DFS",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/course-schedule/"
+            },
+            {
+                "id": 132,
+                "name": "Detect A cycle in a Directed Graph using DFS",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/course-schedule/"
+            },
+            {
+                "id": 133,
+                "name": "Topological Sort BFS",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/topological-sort-bfs/"
+            },
+            {
+                "id": 134,
+                "name": "Topological Sort DFS",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/topological-sort-using-dfs/"
+            },
+            {
+                "id": 135,
+                "name": "Number of islands(Do in Grid and Graph Both)",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/number-of-islands/"
+            },
+            {
+                "id": 136,
+                "name": "Bipartite graph",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/is-graph-bipartite/"
+            },
+            {
+                "id": 137,
+                "name": "Bipartite Check using DFS",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/is-graph-bipartite/"
+            }
+        ]
+    },
+    {
+        "title": "Graph Part-II",
+        "questions": [
+            {
+                "id": 138,
+                "name": "Strongly Connected Component(using KosaRajuΓÇÖs algo)",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/maximum-number-of-non-overlapping-substrings/discuss/766485/kosaraju-algorithm-on"
+            },
+            {
+                "id": 139,
+                "name": "Dijkstra's algorithm",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/dijkstras-algorithm-using-priority-queue-g-32/"
+            },
+            {
+                "id": 140,
+                "name": "Bellman ford algorithm",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/bellman-ford-algorithm-g-41/"
+            },
+            {
+                "id": 141,
+                "name": "Floyd Warshall Algorithm",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/floyd-warshall-algorithm-g-42/"
+            },
+            {
+                "id": 142,
+                "name": "MST using Prim's Algo",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/prims-algorithm-minimum-spanning-tree-c-and-java-g-45/"
+            },
+            {
+                "id": 143,
+                "name": "MST using KruskalΓÇÖs Algo",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/kruskals-algorithm-minimum-spanning-tree-g-47/"
             }
         ]
     },
@@ -73,22 +981,110 @@
         "title": "Dynamic Programming",
         "questions": [
             {
-                "id": 11,
-                "name": "Longest Common Subsequence",
+                "id": 144,
+                "name": "Max Product Subarray",
                 "platform": "LeetCode",
-                "link": "https://leetcode.com/problems/longest-common-subsequence/"
+                "link": "https://leetcode.com/problems/maximum-product-subarray/"
             },
             {
-                "id": 12,
-                "name": "0-1 Knapsack Problem",
-                "platform": "GeeksforGeeks",
-                "link": "https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1"
+                "id": 145,
+                "name": "Longest Increasing Subsequence",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/longest-increasing-subsequence-binary-search-dp-43/"
             },
             {
-                "id": 13,
-                "name": "Edit Distance",
+                "id": 146,
+                "name": "Longest common subsequence",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/print-longest-common-subsequence-dp-26/"
+            },
+            {
+                "id": 147,
+                "name": "0 and 1 Knapsack",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/0-1-knapsack-dp-19/"
+            },
+            {
+                "id": 148,
+                "name": "Edit distance",
                 "platform": "LeetCode",
                 "link": "https://leetcode.com/problems/edit-distance/"
+            },
+            {
+                "id": 149,
+                "name": "Matrix chain multiplication",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/dynamic-programming/matrix-chain-multiplication-dp-48/"
+            }
+        ]
+    },
+    {
+        "title": "Dynamic Programming Part-II",
+        "questions": [
+            {
+                "id": 150,
+                "name": "Minimum sum path in the matrix, (count paths and similar type do, also backtrack to find the Minimum path)",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/minimum-path-sum/"
+            },
+            {
+                "id": 151,
+                "name": "Coin change II",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/coin-change-2/"
+            },
+            {
+                "id": 152,
+                "name": "Subset sum equals to target",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/subset-sum-sum-of-all-subsets/"
+            },
+            {
+                "id": 153,
+                "name": "Rod cutting problem",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/rod-cutting-problem-dp-24/"
+            }
+        ]
+    },
+    {
+        "title": "Trie",
+        "questions": [
+            {
+                "id": 154,
+                "name": "Trie Implementation and Operations",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/implement-trie-prefix-tree/"
+            },
+            {
+                "id": 155,
+                "name": "Trie Implementation and Advanced Operations",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/implement-trie-ii/"
+            },
+            {
+                "id": 156,
+                "name": "Number of distinct substrings in a string",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/number-of-distinct-substrings-in-a-string-using-trie/"
+            },
+            {
+                "id": 157,
+                "name": "Power Set (this is very important)",
+                "platform": "takeUforward",
+                "link": "https://takeuforward.org/data-structure/power-set-print-all-the-possible-subsequences-of-the-string/"
+            },
+            {
+                "id": 158,
+                "name": "Maximum XOR of two numbers in an array",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/"
+            },
+            {
+                "id": 159,
+                "name": "Maximum Xor with an element from an array",
+                "platform": "LeetCode",
+                "link": "https://leetcode.com/problems/maximum-xor-with-an-element-from-array/"
             }
         ]
     }

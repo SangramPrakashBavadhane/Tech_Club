@@ -24,5 +24,5 @@ const dsaProblemSchema = new mongoose.Schema({
     }
 });
 
-const dsaProblem = mongoose.model("DsaProblem", dsaProblemSchema);
-export default dsaProblem;
+const DsaProblem = mongoose.model("DsaProblem", dsaProblemSchema);
+export default DsaProblem;  
