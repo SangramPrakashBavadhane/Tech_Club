@@ -31,6 +31,12 @@ export default function Navbar() {
           ./notifications
         </a>
 
+        {currentUser && (currentRole === 'council' || currentRole === 'president') && (
+          <Link to="/dashboard" className="text-zinc-400 hover:text-terminal-cyan transition-colors">
+            ./dashboard
+          </Link>
+        )}
+
         {currentUser ? (
           <div className="flex items-center gap-4">
             <span className="text-zinc-500">

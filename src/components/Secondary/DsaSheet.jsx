@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { useParams, Link } from 'react-router-dom'
 
 export default function DsaSheet() {
+    const { userId } = useParams(); // Reads student ID from URL
+    const isReadOnly = !!userId;    // If userId exists in the URL, this page is Read-Only
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
     const [problems, setProblems] = useState('');
     const [solvedProblems, setSolvedProblems] = useState('');
+    const [studentName, setStudentName] = useState('');
 
-    const API_URI = import.meta.env.VITE_API_URI ||
-        'http://localhost:5000/api';
+    const API_URI = (import.meta.env.VITE_API_URL || 'http://localhost:5000') + '/api';
 
     useEffect(() => {
         const fetchDsaData = async () => {
@@ -22,18 +25,41 @@ export default function DsaSheet() {
                 setProblems(problemsdata);
 
                 const token = localStorage.getItem('syntax_token');
-                if (token) {
-                    const solvedRes = await fetch(`${API_URI}/dsa/solved`, {
-                        headers: {
-                            'Authorization': `Bearer ${token}`,
-                        }
+
+                if (isReadOnly) {
+                    // 1. Fetch this specific student's solved questions array
+                    const solvedRes = await fetch(`${API_URI}/dsa/solved/${userId}`, {
+                        headers: { 'Authorization': `Bearer ${token}` }
                     });
                     if (solvedRes.ok) {
                         const solvedData = await solvedRes.json();
                         setSolvedProblems(solvedData.solvedProblems || []);
                     }
 
+                    // 2. Fetch users directory to look up the student's name
+                    const usersRes = await fetch(`${API_URI}/dsa/users`, {
+                        headers: { 'Authorization': `Bearer ${token}` }
+                    });
+                    if (usersRes.ok) {
+                        const usersData = await usersRes.json();
+                        const found = usersData.find(u => u.id === userId);
+                        if (found) setStudentName(found.username);
+                    }
+                } else {
+                    // Normal mode: Fetch logged-in user's checked list
+                    if (token) {
+                        const solvedRes = await fetch(`${API_URI}/dsa/solved`, {
+                            headers: {
+                                'Authorization': `Bearer ${token}`,
+                            }
+                        });
+                        if (solvedRes.ok) {
+                            const solvedData = await solvedRes.json();
+                            setSolvedProblems(solvedData.solvedProblems || []);
+                        }
+                    }
                 }
+
 
 
             } catch (err) {
@@ -44,10 +70,13 @@ export default function DsaSheet() {
             }
         };
         fetchDsaData();
-    }, [API_URI]);
+    }, [API_URI, isReadOnly, userId]);
 
 
     const handleToggle = async (problemId) => {
+        if (isReadOnly) {
+            return;
+        }
         const token = localStorage.getItem('syntax_token');
         if (!token) {
             alert('Please login to track your progress');
@@ -100,22 +129,36 @@ export default function DsaSheet() {
 
 
     return (
-        <div style={{ padding: '20px' }}>
-            <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>DSA Striver Sheet Tracker</h1>
+        <div style={{ padding: '20px' }}> {/* Wrap everything inside this single div */}
 
-            {/* Show warning if user is a guest (not logged in) */}
-            {!isLoggedIn && (
-                <div style={{ color: 'orange', marginBottom: '15px' }}>
-                    <strong>Note:</strong> You must be logged in to save your checked problems.
+            {isReadOnly && (
+                <div style={{ marginBottom: '15px' }}>
+                    <Link to="/dashboard" style={{ color: '#06b6d4' }}>
+                        &lt; Back to Council Dashboard
+                    </Link>
                 </div>
             )}
 
-            {/* Solved Problems Counter */}
+            <h1>
+                {isReadOnly ? `${studentName}'s DSA Tracker` : 'DSA Striver Sheet Tracker'}
+            </h1>
+
+            {isReadOnly ? (
+                <div style={{ color: 'yellow', marginBottom: '15px' }}>
+                    <strong>Audit Mode:</strong> You are viewing this sheet in read-only mode.
+                </div>
+            ) : (
+                !isLoggedIn && (
+                    <div style={{ color: 'orange', marginBottom: '15px' }}>
+                        <strong>Note:</strong> You must be logged in to save your checked problems.
+                    </div>
+                )
+            )}
+
             <div style={{ marginBottom: '20px' }}>
                 Total Problems: {problems.length} | Solved: {solvedProblems.length}
             </div>
 
-            {/* Loop through each grouped topic and draw a table */}
             {Object.keys(groupedProblems).map(topic => (
                 <div key={topic} style={{ marginTop: '20px' }}>
                     <h2 style={{ fontSize: '18px', marginBottom: '10px', borderBottom: '1px solid #333' }}>{topic}</h2>
@@ -131,7 +174,6 @@ export default function DsaSheet() {
                         </thead>
                         <tbody>
                             {groupedProblems[topic].map(problem => {
-                                // Check if this problem's ID is inside our solvedProblems array
                                 const isSolved = solvedProblems.includes(problem.id);
                                 return (
                                     <tr key={problem.id} style={{ backgroundColor: isSolved ? '#14532d' : 'transparent' }}>
@@ -140,6 +182,7 @@ export default function DsaSheet() {
                                                 type="checkbox"
                                                 checked={isSolved}
                                                 onChange={() => handleToggle(problem.id)}
+                                                disabled={isReadOnly} // Grayed out if in read-only audit mode
                                             />
                                         </td>
                                         <td>{problem.id}</td>
@@ -157,8 +200,10 @@ export default function DsaSheet() {
                     </table>
                 </div>
             ))}
-        </div>
+
+        </div> // Close the wrapper div
     );
+
 
 
 }

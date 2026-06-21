@@ -1,7 +1,8 @@
 import express from 'express'
 import DsaProblem from '../models/DsaProblem.js'
 import User from '../models/user.js';
-import { requireAuth } from '../middleware/auth.js';
+import { requireAuth, requireCouncilOrPresident } from '../middleware/auth.js';
+
 
 const router = express.Router();
 
@@ -61,6 +62,51 @@ router.post('/toggle', requireAuth, async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 });
+
+router.get(
+    '/users',
+    requireAuth,
+    requireCouncilOrPresident,
+    async (req, res) => {
+        try {
+            // Query the database for all users, selecting only their username, role, and solvedProblems fields
+            const users = await User.find({}, 'username role solvedProblems');
+
+            // Loop through users and build the directory data
+            const userDirectory = users.map(u => ({
+                id: u._id,
+                username: u.username,
+                role: u.role,
+                solvedCount: u.solvedProblems ? u.solvedProblems.length : 0
+            }));
+            // Send the directory list as JSON to the frontend
+            res.status(200).json(userDirectory);
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        }
+    }
+);
+
+// GET /api/dsa/solved/:userId
+// WHY: Retrieves the array of solved question IDs for a specific student.
+// RESTRICTION: Only accessible by 'council' or 'president'
+router.get('/solved/:userId', requireAuth, requireCouncilOrPresident, async (req, res) => {
+    try {
+        // req.params.userId reads the ID value from the URL parameter (:userId)
+        const student = await User.findById(req.params.userId);
+
+        if (!student) {
+            return res.status(404).json({ message: 'Student not found' });
+        }
+
+        // Return the student's solved array (defaulting to empty [] if they haven't solved any yet)
+        res.status(200).json({ solvedProblems: student.solvedProblems || [] });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+
 
 
 

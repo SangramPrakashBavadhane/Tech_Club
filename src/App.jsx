@@ -10,13 +10,15 @@ import Team from './components/Secondary_footer/team';
 import About from './components/Secondary_footer/about';
 import Resources from './components/Secondary_footer/resources';
 import DsaSheet from './components/Secondary/DsaSheet';
+import CouncilDashboard from './components/Secondary/CouncilDashboard';
 
 
 function App() {
 
   const location = useLocation();
 
-  const hideNavbarFooter = location.pathname === '/login' || location.pathname === '/register';
+  const hideNavbarFooter = location.pathname === '/login' || location.pathname === '/register' || location.pathname.startsWith('/dsa');
+
 
   return (
     <div className="min-h-screen bg-[#09090b] text-zinc-100 font-mono flex flex-col justify-between">
@@ -32,6 +34,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/dsa" element={<DsaSheet />} />
+          <Route path="/dashboard" element={<CouncilDashboard />} />
+          <Route path="/dsa/:userId" element={<DsaSheet />} />
 
         </Routes>
       </div>

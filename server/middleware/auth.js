@@ -25,3 +25,15 @@ export const requireAuth = async (req, res, next) => {
     }
 };
 
+
+export const requireCouncilOrPresident = (req, res, next) => {
+
+    if (!req.user || (req.user.role !== 'council' && req.user.role !== 'president')) {
+        return res.status(403).json({ message: 'Access denied: Insufficient permissions' });
+    }
+
+    next();
+};
+
+
+
