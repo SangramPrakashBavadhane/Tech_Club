@@ -23,12 +23,12 @@ export function AuthProvider({ children }) {
     const currentRole = currentUser ? currentUser.role : 'GUEST';
 
 
-    const registerUser = async (username, email, password, academicYear, interestTags) => {
+    const registerUser = async (username, email, password, academicYear, interestTags, department) => {
         try {
             const response = await fetch(`${API_URL}/api/auth/register`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username, email, password, academicYear, interestTags })
+                body: JSON.stringify({ username, email, password, academicYear, interestTags, department })
             })
             const data = await response.json();
 

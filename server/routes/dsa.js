@@ -69,15 +69,18 @@ router.get(
     requireCouncilOrPresident,
     async (req, res) => {
         try {
-            // Query the database for all users, selecting only their username, role, and solvedProblems fields
-            const users = await User.find({}, 'username role solvedProblems');
+            // Query the database for all users, selecting only their username, role, solvedProblems, academicYear, department, and interestTags fields
+            const users = await User.find({}, 'username role solvedProblems academicYear department interestTags');
 
             // Loop through users and build the directory data
             const userDirectory = users.map(u => ({
                 id: u._id,
                 username: u.username,
                 role: u.role,
-                solvedCount: u.solvedProblems ? u.solvedProblems.length : 0
+                solvedCount: u.solvedProblems ? u.solvedProblems.length : 0,
+                academicYear: u.academicYear,
+                department: u.department,
+                interestTags: u.interestTags || []
             }));
             // Send the directory list as JSON to the frontend
             res.status(200).json(userDirectory);

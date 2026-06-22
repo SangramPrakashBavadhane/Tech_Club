@@ -8,6 +8,7 @@ export default function Register() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [academicYear, setAcademicYear] = useState(1);
+    const [department, setDepartment] = useState('CSE');
     const [tagsInput, setTagsInput] = useState('');
     const [errorMsg, setErrorMsg] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,7 +29,7 @@ export default function Register() {
             .map(tag => tag.trim())
             .filter(tag => tag.length > 0);
 
-        const result = await registerUser(username, email, password, academicYear, interestTags);
+        const result = await registerUser(username, email, password, academicYear, interestTags, department);
         setIsSubmitting(false);
 
         if (result.success) {
@@ -105,6 +106,25 @@ export default function Register() {
                             <option value={2}>2nd Year (SE)</option>
                             <option value={3}>3rd Year (TE)</option>
                             <option value={4}>4th Year (BE)</option>
+                        </select>
+                    </div>
+
+                    {/* Department select dropdown */}
+                    <div>
+                        <label className="block text-zinc-500 text-xs uppercase mb-1.5 tracking-wider">./department</label>
+                        <select
+                            value={department}
+                            onChange={(e) => setDepartment(e.target.value)}
+                            className="w-full bg-zinc-950 border border-zinc-800 rounded px-3 py-2 text-sm text-zinc-300 focus:outline-none focus:border-terminal-cyan transition-colors cursor-pointer"
+                        >
+                            <option value="CSE">Computer Science (CSE)</option>
+                            <option value="ECE">Electronics (ECE)</option>
+                            <option value="EEE">Electrical (EEE)</option>
+                            <option value="MECH">Mechanical (MECH)</option>
+                            <option value="CHEM">Chemical (CHEM)</option>
+                            <option value="CIV">Civil (CIV)</option>
+                            <option value="META">Metallurgical (META)</option>
+                            <option value="MIN">Mining (MIN)</option>
                         </select>
                     </div>
 

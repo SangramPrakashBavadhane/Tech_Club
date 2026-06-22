@@ -9,6 +9,11 @@ const userSchema = new mongoose.Schema(
             trim: true,
             minlength: [3, 'username must be atleast 3 characters long']
         },
+        department: {
+            type: String,
+            required: true,
+            enum: ["CSE", "ECE", "EEE", "MECH", "CHEM", "CIV", "META", "MIN"]
+        },
         email: {
             type: String,
             required: true,

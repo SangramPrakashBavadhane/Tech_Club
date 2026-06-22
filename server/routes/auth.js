@@ -10,7 +10,7 @@ router.post('/register', async (req, res) => {
 
     try {
 
-        const { username, email, password, role, academicYear, interestTags } = req.body;
+        const { username, email, password, role, academicYear, interestTags, department } = req.body;
 
         const userExists = await User.findOne({ $or: [{ username }, { email }] });
         if (userExists) {
@@ -26,6 +26,7 @@ router.post('/register', async (req, res) => {
             password: hashedPassword,
             academicYear,
             interestTags,
+            department,
             role: 'pending'
         });
 
@@ -43,7 +44,8 @@ router.post('/register', async (req, res) => {
                 id: newUser._id,
                 username: newUser.username,
                 email: newUser.email,
-                role: newUser.role
+                role: newUser.role,
+                department: newUser.department
             }
         });
     } catch (error) {
@@ -78,7 +80,8 @@ router.post('/login', async (req, res) => {
                 id: user._id,
                 username: user.username,
                 email: user.email,
-                role: user.role
+                role: user.role,
+                department: user.department
             }
         })
 
