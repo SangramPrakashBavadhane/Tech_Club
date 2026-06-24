@@ -2,6 +2,7 @@ import express from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import User from '../models/user.js';
+import { requireAuth, requirePresident } from '../middleware/auth.js';
 
 
 const router = express.Router();
@@ -90,7 +91,60 @@ router.post('/login', async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
-})
+});
+
+// PUT /api/auth/update-role
+// WHY: Allows the President to update the role of any student in MongoDB.
+// RESTRICTION: Checked by requireAuth and requirePresident.
+router.put('/update-role', requireAuth, requirePresident, async (req, res) => {
+    try {
+        const { userId, newRole } = req.body;
+
+        // Validation check for correct enum values
+        if (!['pending', 'active', 'council', 'president'].includes(newRole)) {
+            return res.status(400).json({ message: 'Invalid role value specified.' });
+        }
+
+        // Find the student in the database
+        const targetUser = await User.findById(userId);
+        if (!targetUser) {
+            return res.status(404).json({ message: 'Target student not found.' });
+        }
+
+        // Save the new role
+        targetUser.role = newRole;
+        await targetUser.save();
+
+        res.status(200).json({
+            message: `Successfully promoted ${targetUser.username} to ${newRole}.`,
+            user: {
+                id: targetUser._id,
+                username: targetUser.username,
+                role: targetUser.role
+            }
+        });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+// GET /api/auth/team
+// WHY: Retrieves the public list of active team members (council members and the president).
+// RESTRICTION: Publicly accessible
+router.get('/team', async (req, res) => {
+    try {
+        const team = await User.find(
+            { role: { $in: ['council', 'president'] } },
+            'username role department'
+        );
+        res.status(200).json(team);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+
+
 
 
 

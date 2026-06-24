@@ -35,5 +35,12 @@ export const requireCouncilOrPresident = (req, res, next) => {
     next();
 };
 
+export const requirePresident = (req, res, next) => {
+    if (!req.user || req.user.role !== 'president') {
+        return res.status(403).json({ message: 'Access denied: President privileges required' });
+    }
+    next();
+};
+
 
 

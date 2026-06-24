@@ -3,15 +3,15 @@ import { Link, useNavigate } from 'react-router-dom'; // <-- Add useNavigate
 import io from 'socket.io-client'; // <-- Add socket client
 import { useAuth } from '../../context/authContext'; // <-- Add useAuth context
 
-
 export default function CouncilDashboard() {
     // 1. Declare states to store the list of users, loading, and error states
     const navigate = useNavigate();
-    const { currentUser } = useAuth();
+    const { currentUser, currentRole } = useAuth();
     const socketRef = useRef(null);
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
 
     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
@@ -66,6 +66,47 @@ export default function CouncilDashboard() {
         return <div style={{ padding: '20px', color: 'red' }}>Error: {error}</div>;
     }
 
+    const handleRoleChange = async (userId, newRole) => {
+        const targetUser = users.find(u => u.id === userId);
+        const username = targetUser ? targetUser.username : 'this student';
+
+        // Add a confirmation dialog before proceeding
+        const confirmChange = window.confirm(`Are you sure you want to change the role of ${username} to ${newRole.toUpperCase()}?`);
+        if (!confirmChange) {
+            return; // Exit early. The select dropdown will automatically revert to its old value
+        }
+
+        try {
+            const token = localStorage.getItem('syntax_token');
+            const response = await fetch(`${API_URL}/api/auth/update-role`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({ userId, newRole })
+            });
+
+            if (!response.ok) {
+                const data = await response.json();
+                throw new Error(data.message || 'Failed to update role');
+            }
+
+            // Instantly update the local users list state so it renders immediately
+            setUsers(prevUsers =>
+                prevUsers.map(user =>
+                    user.id === userId ? { ...user, role: newRole } : user
+                )
+            );
+
+            alert(`Successfully updated ${username} to ${newRole}!`);
+        } catch (err) {
+            alert(`Error updating user role: ${err.message}`);
+        }
+    };
+
+
+
     const handleInvite = (studentId) => {
         if (socketRef.current) {
             const roomId = `call-${studentId}`;
@@ -93,6 +134,7 @@ export default function CouncilDashboard() {
                 <thead>
                     <tr style={{ textAlign: 'left', backgroundColor: '#111' }}>
                         <th>Student Name</th>
+                        <th>Role</th>
                         <th>Year</th>
                         <th>Department</th>
                         <th>Tech Interests</th>
@@ -100,11 +142,40 @@ export default function CouncilDashboard() {
                         <th>Actions</th>
                     </tr>
                 </thead>
+
                 <tbody>
                     {users.map(user => (
                         <tr key={user.id} style={{ borderBottom: '1px solid #222' }}>
                             <td style={{ fontWeight: 'bold' }}>{user.username}</td>
+                            <td>
+                                {currentRole === 'president' ? (
+                                    <select
+                                        value={user.role}
+                                        onChange={(e) => handleRoleChange(user.id, e.target.value)}
+                                        style={{
+                                            backgroundColor: '#09090b',
+                                            color: '#22d3ee',
+                                            border: '1px solid #22d3ee55',
+                                            borderRadius: '4px',
+                                            padding: '4px 8px',
+                                            fontFamily: 'monospace',
+                                            cursor: 'pointer',
+                                            outline: 'none'
+                                        }}
+                                    >
+                                        <option value="pending">Pending</option>
+                                        <option value="active">Active</option>
+                                        <option value="council">Council</option>
+                                        <option value="president">President</option>
+                                    </select>
+                                ) : (
+                                    <span style={{ textTransform: 'capitalize', color: '#a1a1aa' }}>
+                                        {user.role}
+                                    </span>
+                                )}
+                            </td>
                             <td>{user.academicYear ? `${user.academicYear} Yr` : 'N/A'}</td>
+
                             <td style={{ color: '#a1a1aa' }}>{user.department || 'N/A'}</td>
                             <td>
                                 {user.interestTags && user.interestTags.length > 0 ? (
